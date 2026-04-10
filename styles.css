@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    overflow-x: hidden;
+}
+
+.main-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    /* background-color: green; */
+
+}
+/* BEGINNING OF FIRST SECTION */
+.first-section{
+    display: flex;
+    position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  font-family: 'Oswald', sans-serif;
+  justify-content: space-between;
+  padding-left: 65px;
+  padding-top: 40px;
+  padding-right: 65px;
+  /* background-color: grey; */
+  min-height: 10vh;
+}
+
+.first-section-image{
+    width: 5%;
+}
+
+.first-section-image img{
+    width: 100%;
+}
+
+.first-section-b {
+    gap: 30px;
+    display: flex;
+    /* flex-direction: column; */
+ 
+}
+
+.first-section-b a{
+ font-family: 'Oswald', sans-serif;
+font-weight: 600;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+/* ENDING OF FIRST SECTION */
+
+
+
+/* BEGINNING OF SECOND SECTION */
+
+.second-section{
+    display: flex;
+         width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  top: 50%;
+  /* background-color: grey; */
+}
+
+.second-one{
+    /* background-color: blue; */
+    width: 50%;
+    min-height: 30vh;
+ font-family: 'Oswald', sans-serif;
+ padding-left: 19%;
+ margin-top: 5rem;
+ position: absolute;
+ z-index: 2;
+
+}
+
+.explore-button{
+    margin-top: 10%;
+    display: block;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* min-height: 30%; */
+    border: none;
+}
+
+.second-one p{
+    font-size: 90px;
+    font-weight:800;
+    line-height: 90px;
+}
+
+.second-two{
+    margin-left: 40%;
+}
+.second-two-a{
+    z-index: -1;
+    width: 60%;
+    /* margin-top: 7rem; */
+    position: relative;
+}
+.second-two-b{
+    /* z-index: 100; */
+    width: 15%;
+    position: absolute;
+    margin-left: -7rem;
+    margin-top: 3rem;
+    z-index: -1;
+    flex: 1;
+   
+}
+.second-two-c{
+    /* z-index: 100; */
+    flex: 1;
+    position: absolute;
+    width: 30%;
+    /* z-index: 100; */
+    margin-top: 4rem;
+}
+
+.second-three{
+    display: flex;
+    width: 2%;
+    height: auto;
+    /* min-height: 30vh; */
+    position: relative;
+    /* justify-content:right; */
+    gap: 5px;
+    padding-top: 10rem;
+    flex-direction: column;
+    /* left: 5rem; */
+    /* background-color: yellow; */
+}
+
+.second-three-a{
+    width: 100%;
+    height: auto;
+}
+.second-three-b{
+    height: auto;
+        width: 100%;
+
+}
+
+.second-three-c{
+    height: auto;
+        width: 100%;
+
+}
+
+.second-three-d{
+    height: auto;
+        width: 100%;
+
+}
+/* ENDING OF SECOND SECTION */
