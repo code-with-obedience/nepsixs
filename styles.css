@@ -9,14 +9,12 @@ body{
     overflow-x: hidden;
 }
 
-.main-container{
+/* .main-container{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 100vh;
-    /* background-color: green; */
-
-}
+} */
 /* BEGINNING OF FIRST SECTION */
 .first-section{
     display: flex;
