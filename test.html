@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            font-size: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            margin-top: 40px;
+            text-align: center;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .card-image.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .no-image {
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Property Showcase</h1>
+
+        <div class="grid">
+            <div class="card" data-card="residential">
+                <h2>Residential and Signature Properties</h2>
+                <p>Your dream home with luxury interior design and premium finishes for ultimate quality and comfort, as every detail is thoughtfully curated to reflect your unique lifestyle.</p>
+            </div>
+
+            <div class="card" data-card="professional">
+                <h2>Professional and Adaptive Spaces</h2>
+                <p>Innovative and versatile environments designed to elevate productivity, enhance collaboration, and create lasting impressions for businesses and their clients.</p>
+            </div>
+
+            <div class="card" data-card="hospitality">
+                <h2>Hospitality and Wellness Complexes</h2>
+                <p>World-class facilities with premium accommodations for a memorable guest experience, seamlessly blending comfort and functionality to create inspiring spaces.</p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg" alt="Residential" class="card-image" data-image="residential">
+            <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg" alt="Professional" class="card-image" data-image="professional">
+            <img src="https://images.pexels.com/photos/3935683/pexels-photo-3935683.jpeg" alt="Hospitality" class="card-image" data-image="hospitality">
+            <span class="no-image">Hover over a card to see the image</span>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const images = document.querySelectorAll('.card-image');
+        const noImageText = document.querySelector('.no-image');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const cardType = card.getAttribute('data-card');
+
+                images.forEach(img => {
+                    if (img.getAttribute('data-image') === cardType) {
+                        img.classList.add('show');
+                    } else {
+                        img.classList.remove('show');
+                    }
+                });
+
+                noImageText.style.display = 'none';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                images.forEach(img => {
+                    img.classList.remove('show');
+                });
+
+                noImageText.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
