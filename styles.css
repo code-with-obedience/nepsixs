@@ -1000,7 +1000,7 @@ color: black;
 /* BEGINNING OF NINE SECTION */
 .nine-section{
     display: flex;
-      width: 100%;
+      width: 90%;
     max-width: 1200px;
     justify-content: space-between;
     margin: 0 auto;
