@@ -611,6 +611,133 @@ color: black;
     /* display: flex; */
 
 }
+@media (max-width: 1200px){
+    .sixth-section{
+         position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: 115px;
+  /* left: 13%; */
+    /* min-height: auto; */
+    /* font-family: 'Open Sans', sans-serif; */
+ font-family: 'Oswald', sans-serif;
+    /* background-color: green; */
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+}
+
+.sixth-one{
+  width: 30%; 
+  height: auto;
+  position: relative;
+  /* width: 400px; */
+  overflow: hidden;
+  cursor: pointer;  
+}
+
+.sixth-one img{
+  display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sixth-one-a{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-items: flex-end; */
+  padding: 40px;
+
+  /* Start hidden */
+  opacity: 0;
+  transition: opacity 0.4s ease;   
+}
+
+.sixth-one-a p {
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.market{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.sixth-one:hover .sixth-one-a {
+  opacity: 1;
+}
+
+.sixth-one:hover .sixth-one-a p {
+  transform: translateY(0);
+    /* display: flex; */
+
+}
+
+.sixth-two{
+    width: 30%; 
+  position: relative;
+  /* width: 400px; */
+  overflow: hidden;
+  cursor: pointer;  
+}
+
+.sixth-two img{
+  display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sixth-two-a{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-items: flex-end; */
+  padding: 40px;
+
+  /* Start hidden */
+  opacity: 0;
+  transition: opacity 0.4s ease;   
+}
+
+.sixth-two-a p {
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.market{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.sixth-two:hover .sixth-two-a {
+  opacity: 1;
+}
+
+.sixth-two:hover .sixth-two-a p {
+  transform: translateY(0);
+    /* display: flex; */
+
+}
+}
 /* ENDING OF SIXTH SECTION */
 
 /* BEGINNING OF SEVENTH SECTION */
