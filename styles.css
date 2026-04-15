@@ -388,9 +388,9 @@ color: black;
   margin-left: calc(-50vw + 50%);
   /* font-family: 'Oswald', sans-serif; */
   /* justify-content: space-between; */
-  padding-left: 8rem;
+  padding-left: 9rem;
   padding-top: 50px;
-  padding-right: 65px;
+  padding-right: 9rem;
   /* background-color: grey; */
   min-height: auto;
 }
