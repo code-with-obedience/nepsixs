@@ -386,16 +386,13 @@ color: black;
     position: relative;
       width: 100vw;
   margin-left: calc(-50vw + 50%);
-  /* font-family: 'Oswald', sans-serif; */
-  /* justify-content: space-between; */
-  padding-left: 9rem;
+   padding-left: 9rem;
   padding-top: 50px;
   padding-right: 9rem;
-  /* background-color: grey; */
   min-height: auto;
 }
 
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
   .fourth-section{
     width: 100%;
     max-width: 1200px;
@@ -403,13 +400,13 @@ color: black;
     min-height: 50vh;
     position: relative;
     left: 10%;
-    /* background-color: blue; */
+    background-color: blue;
     font-size: 90px;
     font-weight: 900;
     line-height: 90px;
  font-family: 'Oswald', sans-serif;
 }  
-}
+} */
 /* ENDING OF FOURTH SECTION */
 
 /* BEGINNING OF FIFTH SECTION */
