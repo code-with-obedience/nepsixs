@@ -1009,11 +1009,11 @@ color: black;
     display: flex;
 }
 .num{
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 900;
 }
 .fully{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
 }
