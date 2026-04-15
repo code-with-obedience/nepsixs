@@ -1002,10 +1002,11 @@ color: black;
     display: flex;
       width: 90%;
     max-width: 1200px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-around;
     margin: 0 auto;
     min-height: auto;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .num{
