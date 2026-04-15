@@ -998,23 +998,14 @@ color: black;
 /* ENDING OF EIGHT SECTION */
 
 /* BEGINNING OF NINE SECTION */
-.nine-section{
-    display: flex;
-      width: 90%;
-    max-width: 1200px;
-    /* justify-content: space-between; */
-    justify-content: space-around;
-    margin: 0 auto;
-    min-height: auto;
-    /* background-color: green; */
-}
+
 
 .num{
-    font-size: 80px;
+    font-size: 100px;
     font-weight: 900;
 }
 .fully{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -1026,33 +1017,5 @@ color: black;
     font-weight: 100;
     letter-spacing: 0px;
 }
-@media (max-width: 1200px){
-  .nine-section{
-    display: flex;
-      width: 90%;
-    max-width: 1200px;
-    /* justify-content: space-between; */
-    margin: 0 auto;
-    min-height: auto;
-    /* background-color: green; */
-}
 
-.num{
-    font-size: 80px;
-    font-weight: 600;
-}
-.fully{
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.nine-one-lorem{
-    font-family: "Open Sans",  sans-serif;
-    font-size: 12px;
-    line-height: 24px;
-    font-weight: 100;
-    letter-spacing: 0px;
-}  
-}
 /* ENDING OF NINE SECTION */
