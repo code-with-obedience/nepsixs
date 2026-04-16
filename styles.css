@@ -1203,3 +1203,19 @@ font-family: 'Open Sans', sans-serif;
   padding-top: 10px;
 }
 /* ENDING OF ELEVEN SECTION */
+
+/* BEGINING OF TWELVE SECTION */
+.twelve-section{
+               position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 8rem;
+  left: 8%;
+    /* gap: 1rem; */
+}
+.twelve-one{
+  width: 50%;
+  min-height: auto;
+  background-color: gray;
+}
+/* ENDING OF TWELVE SECTION */
