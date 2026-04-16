@@ -1079,27 +1079,50 @@ color: black;
 /* BEGINNING OF NINE SECTION */
 
 .nine-section{
-    width: 100%;
-    max-width: 1200px;
-    min-height: auto;
-    margin: 0 auto;
-    gap: 60px;
+                position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  /* top: -20% ; */
+  /* bottom: 20%; */
+  margin-top: 8rem;
+  left: 12%;
+    gap: 5rem;
     /* padding: 0 20px; */
     display: flex;
 }
+
+@media(max-width: 1200px){
+  .nine-section{
+                position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 8rem;
+  left: 8%;
+    gap: 1rem;
+    /* padding: 0 20px; */
+    display: flex;
+}
+}
 .num{
-    font-size: 80px;
+    font-size: 90px;
     font-weight: 900;
+    font-optical-sizing: auto;
+     font-family: 'Oswald', sans-serif;
+     /* font-stretch: 100%; */
+     color:rgb(0, 0, 0);
 }
 .fully{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    line-height: 50px;
+     font-family: 'Oswald', sans-serif;
+
 }
 
 .nine-one-lorem{
-    font-family: "Open Sans",  sans-serif;
+font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 100;
@@ -1107,3 +1130,76 @@ color: black;
 }
 
 /* ENDING OF NINE SECTION */
+
+/* BEGINNING OF TEN SECTION */
+.ten-section{
+              position: relative;
+              display: flex;
+      width: 100vw;
+      /* min-height: 10vh; */
+  margin-left: calc(-50vw + 50%);
+  /* top: -20% ; */
+  /* bottom: 20%; */
+  margin-top: 8rem;
+
+}
+
+.ten-one{
+  width: 100%;
+  /* min-height: 10vh; */
+}
+.ten-one img{
+  width: 100%;
+  max-height:500px ;
+  height: auto;
+  display: block;
+}
+/* ENDING OF TEN SECTION */
+
+/* BEGINNING OF ELEVEN SECTION */
+.eleven-section{
+             position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  /* top: -20% ; */
+  /* bottom: 20%; */
+  margin-top: 8rem;
+  left: 12%;
+  display: flex;
+  gap: 4rem;
+}
+
+@media(max-width: 1200px){
+  .eleven-section{
+             position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  /* top: -20% ; */
+  /* bottom: 20%; */
+  margin-top: 8rem;
+  left: 8%;
+  display: flex;
+  gap: 4rem;
+}
+}
+.eleven-lorem{
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 6rem;
+}
+
+@media(max-width: 1200px){
+  .eleven-lorem{
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 6rem;
+  }
+}
+.aenean{
+   font-size: 30px;
+  font-weight: 600;
+}
+.louis{
+  padding-top: 10px;
+}
+/* ENDING OF ELEVEN SECTION */
