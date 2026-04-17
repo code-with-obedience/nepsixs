@@ -1210,12 +1210,36 @@ font-family: 'Open Sans', sans-serif;
       width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-top: 8rem;
-  left: 8%;
-    /* gap: 1rem; */
+  left:   12%;
+    gap: 5rem;
+    display: flex;
+    /* justify-content: c; */
 }
 .twelve-one{
-  width: 50%;
+  width: 45%;
   min-height: auto;
-  background-color: gray;
+  /* background-color: gray; */
+}
+.our{
+  font-size: 85px;
+     font-family: 'Oswald', sans-serif;
+     font-weight: 900;
+     letter-spacing: 5px;
+     padding-top: 8rem;
+}
+
+.twelve-one-lorem{
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+font-weight: 200;
+line-height: 25px;
+}
+.twelve-two{
+  width: 27%;
+  height: auto;
+}
+.twelve-two img {
+width: 100%;
+height: auto;
 }
 /* ENDING OF TWELVE SECTION */
