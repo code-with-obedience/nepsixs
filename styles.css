@@ -1215,6 +1215,19 @@ font-family: 'Open Sans', sans-serif;
     display: flex;
     /* justify-content: c; */
 }
+@media(max-width: 1200px){
+ .twelve-section{
+               position: relative;
+      width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 8rem;
+  left:   8%;
+    gap: 5rem;
+    display: flex;
+    /* justify-content: c; */
+} 
+}
+
 .twelve-one{
   width: 45%;
   min-height: auto;
@@ -1226,6 +1239,15 @@ font-family: 'Open Sans', sans-serif;
      font-weight: 900;
      letter-spacing: 5px;
      padding-top: 8rem;
+}
+@media(max-width: 1200px){
+  .our{
+  font-size: 65px;
+     font-family: 'Oswald', sans-serif;
+     font-weight: 900;
+     letter-spacing: 5px;
+     padding-top: 5rem;
+}
 }
 
 .twelve-one-lorem{
