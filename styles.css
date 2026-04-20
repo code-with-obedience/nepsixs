@@ -1092,12 +1092,13 @@ color: black;
 @media(max-width: 1200px){
   .nine-section{
                 position: relative;
-      width: 100vw;
+      width: 90vw;
   margin-left: calc(-50vw + 50%);
   margin-top: 8rem;
   left: 8%;
     gap: 1rem;
     /* padding: 0 20px; */
+    background-color: green;
     display: flex;
 }
 }
