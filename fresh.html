@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Hero Slider</title>
+
+<style>
+
+/* =========================
+   RESET (VERY IMPORTANT)
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* =========================
+   HERO SECTION (MAIN CONTAINER)
+========================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================
+   SLIDER CONTAINER
+   - holds all slides stacked
+========================= */
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+/* =========================
+   EACH SLIDE
+   - stacked on top of each other
+========================= */
+.slide {
+  position: absolute;
+  inset: 0; /* top:0 left:0 right:0 bottom:0 */
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+  
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.8s ease;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* =========================
+   TEXT AREA
+========================= */
+.text {
+  max-width: 500px;
+}
+
+/* BIG TITLE */
+.text h1 {
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 900;
+
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+/* BUTTON */
+.text button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+/* =========================
+   IMAGE AREA
+========================= */
+.image img {
+  width: 400px;
+
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/* =========================
+   BACKGROUND SHAPE
+========================= */
+.bg-shape {
+  position: absolute;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: #ddd;
+
+  z-index: -1;
+
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+/* =========================
+   ANIMATIONS WHEN ACTIVE
+========================= */
+
+/* TEXT animation */
+.slide.active .text h1 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+
+/* BUTTON animation */
+.slide.active .text button {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.8s ease 0.2s;
+}
+
+/* IMAGE animation */
+.slide.active .image img {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.8s ease 0.3s;
+}
+
+/* BACKGROUND animation */
+.slide.active .bg-shape {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+/* =========================
+   DOTS NAVIGATION
+========================= */
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: black;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+<section class="hero">
+
+  <div class="slider">
+
+    <!-- ================= SLIDE 1 ================= -->
+    <div class="slide active">
+      
+      <div class="text">
+        <h1>ENVISION THE FUTURE</h1>
+        <button>EXPLORE</button>
+      </div>
+
+      <div class="image">
+        <img src="team-img-2.jpg alt="">
+      </div>
+
+      <div class="bg-shape"></div>
+
+    </div>
+
+    <!-- ================= SLIDE 2 ================= -->
+    <div class="slide">
+      
+      <div class="text">
+        <h1>CREATE NEW REALITY</h1>
+        <button>DISCOVER</button>
+      </div>
+
+      <div class="image">
+        <img src="https://via.placeholder.com/400x400/ff4444" alt="">
+      </div>
+
+      <div class="bg-shape"></div>
+
+    </div>
+
+    <!-- ================= SLIDE 3 ================= -->
+    <div class="slide">
+      
+      <div class="text">
+        <h1>DESIGN YOUR WORLD</h1>
+        <button>START NOW</button>
+      </div>
+
+      <div class="image">
+        <img src="team-img-2.jpg" alt="">
+      </div>
+
+      <div class="bg-shape"></div>
+
+    </div>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots"></div>
+
+</section>
+
+<script>
+
+/* =========================
+   SELECT ELEMENTS
+========================= */
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.querySelector(".dots");
+
+let current = 0;
+
+/* =========================
+   CREATE DOTS DYNAMICALLY
+========================= */
+slides.forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+
+  // click to go to slide
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
+
+  dotsContainer.appendChild(dot);
+});
+
+/* SELECT DOTS */
+const dots = document.querySelectorAll(".dot");
+
+/* =========================
+   SHOW SLIDE FUNCTION
+========================= */
+function showSlide(index) {
+  slides[current].classList.remove("active");
+  dots[current].classList.remove("active");
+
+  current = index;
+
+  slides[current].classList.add("active");
+  dots[current].classList.add("active");
+}
+
+/* =========================
+   AUTO PLAY
+========================= */
+setInterval(() => {
+  let next = (current + 1) % slides.length;
+  showSlide(next);
+}, 4000);
+
+/* INITIAL ACTIVE DOT */
+dots[0].classList.add("active");
+
+</script>
+
+</body>
+</html>
